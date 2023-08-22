@@ -10,17 +10,16 @@ int main(){
     }
     int len=a;
     while(i!=len+1){
-        if(len==i){
-            s+=arr[0]*i;
-        }else{
-            if(arr[0]>arr[(int)arr.size()]){
-            s+=i*arr[(int)arr.size()];
-            arr.erase(arr.end()-1);
+         if(arr[0]>arr[(int)arr.size()-1]){
+            s+=i*arr[(int)arr.size()-1];
+            
+            cout<<arr[(int)arr.size()-1]<<" ";arr.erase(arr.end()-1);
         }else{
             s+=i*arr[0];
-           arr.erase(arr.begin());
-        }
+           cout<<arr[0]<<" ";arr.erase(arr.begin());
         }
         i++;
-    }cout<<s;
+    }
+    cout<<s<<'\n';
+    
 }
